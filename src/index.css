@@ -1,0 +1,93 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #282c34; /* Darker background for contrast */
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #ffdd57; /* Bright yellow for the heading */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.Heading_style {
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.Slot {
+  color: #ff4081; /* Vibrant pink for the slot text */
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+}
+
+.Slots_all {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align slots */
+}
+
+.slot_inner {
+  background-color: #ffffff; /* White background for slots */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 350px;
+  margin: 0; /* Remove margins to avoid space between slots */
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #ff4081; /* Border with vibrant pink */
+}
+
+.slot_inner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  background-color: #ffeb3b; /* Light yellow on hover */
+}
+
+h1:not(.Heading_style) {
+  margin: 10px 0;
+  font-size: 1.8rem;
+  color: #333; /* Dark gray for regular results */
+}
+
+hr {
+  display: none; /* Hide horizontal rules */
+}
+
+.matching {
+  color: #4caf50; /* Green color for matching */
+  font-weight: bold;
+  font-size: 1.6rem;
+  animation: pop 0.3s ease; /* Add animation for matching */
+}
+
+.not-matching {
+  color: #f44336; /* Red color for not matching */
+  font-weight: bold;
+  font-size: 1.6rem;
+  animation: shake 0.3s ease; /* Add animation for not matching */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
